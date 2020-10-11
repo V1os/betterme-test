@@ -1,0 +1,1 @@
+export { fetchSearchData } from './fetchSearchData';

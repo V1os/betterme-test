@@ -1,9 +1,7 @@
 // Core
 import { getFullApiUrl } from 'instruments';
 
-const GROUP_ID = '';
-const TOKEN = '';
-const url = 'https://lab.lectrum.io/react/api';
-const api = getFullApiUrl(url, GROUP_ID);
+const url = 'https://api.github.com/search/repositories';
+const api = getFullApiUrl(url);
 
-export { GROUP_ID, TOKEN, api, url };
+export { api, url };

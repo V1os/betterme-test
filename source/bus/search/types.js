@@ -1,0 +1,8 @@
+export const types = {
+    // Sync
+    FILL_SEARCH_DATA:   'FILL_SEARCH_DATA',
+    REMOVE_SEARCH_DATA: 'REMOVE_SEARCH_DATA',
+
+    // Async
+    FETCH_SEARCH_DATA_ASYNC: 'FETCH_SEARCH_DATA_ASYNC',
+};
