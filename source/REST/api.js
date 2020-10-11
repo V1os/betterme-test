@@ -3,6 +3,7 @@ import { MAIN_URL } from './config';
 
 const initialHeader = {
     'X-RateLimit-Limit': 30,
+    "Content-Type":      "application/json",
 };
 
 export const api = {
@@ -15,13 +16,15 @@ export const api = {
                 return `${encodeURIComponent(key)}=${encodeURIComponent(parameters[key])}`;
             }).join('&');
 
-            return fetch(`${MAIN_URL}/?${query}`, {
-                method: 'GET',
-
+            return fetch(`${MAIN_URL}?${query}`, {
+                method:  'GET',
                 headers: {
                     // Authorization: this.token,
                     ...headers,
                 },
+                mode:           'no-cors',
+                referrerPolicy: 'no-referrer',
+                cache:          'no-cache',
             });
         },
     },
