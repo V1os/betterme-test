@@ -13,11 +13,11 @@ const Search = () => {
     const actions = bindActionCreators({ ...searchActions }, dispatch);
 
     const handle = useCallback(() => {
-        console.log('asdfasdf', inputSearch.current.value);
         actions.fetchPostsAsync({
-            q:     inputSearch.current.value,
-            sort:  'stars',
-            order: 'desc',
+            q:          inputSearch.current.value || 'test',
+            sort:       'stars', // sort by stars
+            order:      'desc',
+            'per_page': 30, // per page
         });
     }, []);
     const onClick = (event) => handle();

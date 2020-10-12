@@ -2,8 +2,7 @@
 import { MAIN_URL } from './config';
 
 const initialHeader = {
-    'X-RateLimit-Limit': 30,
-    "Content-Type":      "application/json",
+    "Content-Type": "application/json",
 };
 
 export const api = {
