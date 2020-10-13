@@ -18,22 +18,6 @@ Object {
 `);
     });
 
-    test('setOnlineState', () => {
-        expect(uiActions.setOnlineState()).toMatchInlineSnapshot(`
-Object {
-  "type": "SET_ONLINE_STATE",
-}
-`);
-    });
-
-    test('setOfflineState', () => {
-        expect(uiActions.setOfflineState()).toMatchInlineSnapshot(`
-Object {
-  "type": "SET_OFFLINE_STATE",
-}
-`);
-    });
-
     test('emitError', () => {
         expect(uiActions.emitError(__.error)).toMatchInlineSnapshot(`
 Object {
