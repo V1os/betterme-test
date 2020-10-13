@@ -20,15 +20,21 @@ const Search = () => {
             'per_page': 30, // per page
         });
     }, []);
-    const onClick = (event) => handle();
+    const onClick = () => handle();
 
     const searchData = useSelector((state) => state.search);
 
-    console.log(searchData);
+    console.log('-->', [...searchData]);
     const getList = () => {
         return (
             <>
-                {[...searchData].map((idx, item) => (<div key = { idx }>{item.name}</div>))}
+                {[...searchData].map((item, idx) => (
+                    <>
+                        <div key = { idx }>
+                            {item.get('name')}  (<span>stars: {item.get('stargazers_count')}</span>)
+                        </div>
+                    </>
+                ))}
             </>
         );
     };
